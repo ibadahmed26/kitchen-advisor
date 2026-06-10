@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "Kitchen Advisor",
+    "slug": "kitchen-advisor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "backgroundColor": "#3B2A1A",
+    "android": {
+      "package": "com.personal.kitchenadvisor",
+      "adaptiveIcon": {
+        "backgroundColor": "#E8912D"
+      }
+    },
+    "platforms": ["android"]
+  }
+}
