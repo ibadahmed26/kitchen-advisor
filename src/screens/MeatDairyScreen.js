@@ -4,9 +4,9 @@ import {
   Text,
   View,
   TouchableOpacity,
-  SafeAreaView,
   ScrollView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import { meatSections } from "../data/ingredients";
 import IngredientChip from "../components/IngredientChip";

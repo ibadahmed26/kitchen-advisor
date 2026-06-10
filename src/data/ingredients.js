@@ -46,12 +46,23 @@ export const meatSections = [
 ];
 
 export const vegetableItems = [
-  { id: "potato", name: "Potato" },
-  { id: "onion", name: "Onion" },
-  { id: "tomato", name: "Tomato" },
+  { id: "potato", name: "Potato / Aloo" },
+  { id: "tomato", name: "Tomato / Tamatar" },
   { id: "okra", name: "Okra / Bhindi" },
   { id: "spinach", name: "Spinach / Palak" },
-  { id: "cauliflower", name: "Cauliflower" },
+  { id: "cauliflower", name: "Cauliflower / Gobi" },
+  { id: "cabbage", name: "Cabbage / Band Gobi" },
+  { id: "peas", name: "Peas / Matar" },
+  { id: "carrot", name: "Carrot / Gajar" },
+  { id: "capsicum", name: "Capsicum / Shimla Mirch" },
+  { id: "eggplant", name: "Eggplant / Baingan" },
+  { id: "bottle_gourd", name: "Bottle Gourd / Lauki" },
+  { id: "bitter_gourd", name: "Bitter Gourd / Karela" },
+  { id: "ridge_gourd", name: "Ridge Gourd / Tori" },
+  { id: "pumpkin", name: "Pumpkin / Kaddu" },
+  { id: "green_beans", name: "Green Beans / Phaliyan" },
+  { id: "turnip", name: "Turnip / Shaljam" },
+  { id: "radish", name: "Radish / Mooli" },
 ];
 
 export const pulseItems = [
@@ -59,7 +70,15 @@ export const pulseItems = [
   { id: "daal_masoor", name: "Daal Masoor" },
   { id: "daal_moong", name: "Daal Moong" },
   { id: "daal_mash", name: "Daal Mash" },
-  { id: "chickpeas", name: "Chana" },
+  { id: "daal_malka", name: "Daal Malka / Sabut Masoor" },
+  { id: "bean", name: "Red/Black Lobia" },
+  { id: "chickpeas", name: "White/Black Chana" },
+  { id: "rice", name: "Basmati Rice / Biryani Chawal" },
+  { id: "macaroni", name: "Macaroni" },
+  { id: "spaghetti", name: "Spaghetti" },
+  { id: "flour", name: "Flour / Atta" },
+  { id: "besan", name: "Baisan" },
+  
 ];
 
 export const accentItems = [
@@ -68,6 +87,12 @@ export const accentItems = [
   { id: "green_chilli", name: "Green Chillies" },
   { id: "garlic", name: "Garlic" },
   { id: "ginger", name: "Ginger" },
-  { id: "coriander", name: "Coriander" },
-  { id: "mint", name: "Mint" },
+  { id: "coriander", name: "Coriander / Dhaniya" },
+  { id: "mint", name: "Mint / Podeena" },
+  { id: "oil", name: "Cooking Oil" },
+  { id: "ghee", name: "Ghee" },
+  { id: "cumin", name: "Cumin / Zeera" },
+  { id: "salt", name: "Salt / Namak" },
+  { id: "red_chilli", name: "Red Chilli / Laal Mirch" },
+  { id: "garam_masala", name: "Garam Masala" }
 ];
