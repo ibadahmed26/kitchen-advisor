@@ -11,10 +11,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { pulseItems } from "../data/ingredients";
 import IngredientChip from "../components/IngredientChip";
 import SectionCard from "../components/SectionCard";
+import { getDishSuggestions } from "../utils/recipeMatcher";
+import DishSuggestionCarousel from "../components/DishSuggestionCarousel";
 
 export default function PulsesScreen({ navigation, route }) {
   const previousSelected = route.params?.selectedIngredients || [];
   const [selectedItems, setSelectedItems] = useState([]);
+const currentSelectedIngredients = [...previousSelected, ...selectedItems];
+const suggestions = getDishSuggestions(currentSelectedIngredients, 4);
+  
 
   const toggleItem = (itemId) => {
     setSelectedItems((prev) =>
@@ -25,10 +30,10 @@ export default function PulsesScreen({ navigation, route }) {
   };
 
   const goNext = () => {
-    navigation.navigate("Accents", {
-      selectedIngredients: [...previousSelected, ...selectedItems],
-    });
-  };
+  navigation.navigate("Accents", {
+    selectedIngredients: currentSelectedIngredients,
+  });
+};
 
   const skip = () => {
     navigation.navigate("Accents", {
@@ -38,6 +43,9 @@ export default function PulsesScreen({ navigation, route }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+        <View style={styles.fixedTop}>
+            <DishSuggestionCarousel suggestions={suggestions} />
+        </View>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.emoji}>🍛</Text>
         <Text style={styles.title}>Daal, Rice & Grains</Text>

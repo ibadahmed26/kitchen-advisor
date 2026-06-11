@@ -11,10 +11,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { meatSections } from "../data/ingredients";
 import IngredientChip from "../components/IngredientChip";
 import SectionCard from "../components/SectionCard";
+import { getDishSuggestions } from "../utils/recipeMatcher";
+import DishSuggestionCarousel from "../components/DishSuggestionCarousel";
 
 export default function MeatDairyScreen({ navigation, route }) {
   const previousSelected = route.params?.selectedIngredients || [];
   const [selectedItems, setSelectedItems] = useState([]);
+  const currentSelectedIngredients = [...previousSelected, ...selectedItems];
+  const suggestions = getDishSuggestions(currentSelectedIngredients, 4);
 
   const toggleItem = (itemId) => {
     setSelectedItems((prev) =>
@@ -26,9 +30,9 @@ export default function MeatDairyScreen({ navigation, route }) {
 
   const goNext = () => {
     navigation.navigate("Vegetables", {
-      selectedIngredients: [...previousSelected, ...selectedItems],
+        selectedIngredients: currentSelectedIngredients,
     });
-  };
+    };
 
   const skip = () => {
     navigation.navigate("Vegetables", {
@@ -38,11 +42,14 @@ export default function MeatDairyScreen({ navigation, route }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+        <View style={styles.fixedTop}>
+            <DishSuggestionCarousel suggestions={suggestions} />
+        </View>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.emoji}>🥩</Text>
         <Text style={styles.title}>Meat & Dairy</Text>
         <Text style={styles.subtitle}>Select what you have at home today</Text>
-
+        
         {meatSections.map((section) => (
           <SectionCard key={section.id} title={section.title}>
             <View style={styles.chipContainer}>

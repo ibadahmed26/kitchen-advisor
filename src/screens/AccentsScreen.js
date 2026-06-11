@@ -11,10 +11,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { accentItems } from "../data/ingredients";
 import IngredientChip from "../components/IngredientChip";
 import SectionCard from "../components/SectionCard";
+import { getDishSuggestions } from "../utils/recipeMatcher";
+import DishSuggestionCarousel from "../components/DishSuggestionCarousel";
 
 export default function AccentsScreen({ navigation, route }) {
   const previousSelected = route.params?.selectedIngredients || [];
   const [selectedItems, setSelectedItems] = useState([]);
+    const currentSelectedIngredients = [...previousSelected, ...selectedItems];
+    const suggestions = getDishSuggestions(currentSelectedIngredients, 4);
 
   const toggleItem = (itemId) => {
     setSelectedItems((prev) =>
@@ -26,9 +30,9 @@ export default function AccentsScreen({ navigation, route }) {
 
   const goNext = () => {
     navigation.navigate("Results", {
-      selectedIngredients: [...previousSelected, ...selectedItems],
+        selectedIngredients: currentSelectedIngredients,
     });
-  };
+    };
 
   const skip = () => {
     navigation.navigate("Results", {
@@ -38,6 +42,9 @@ export default function AccentsScreen({ navigation, route }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+        <View style={styles.fixedTop}>
+            <DishSuggestionCarousel suggestions={suggestions} />
+        </View>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.emoji}>🧂</Text>
         <Text style={styles.title}>Side Ingredients</Text>
