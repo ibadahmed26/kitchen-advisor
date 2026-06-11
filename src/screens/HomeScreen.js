@@ -37,10 +37,10 @@ export default function HomeScreen({ navigation }) {
             style={styles.secondaryButton}
             onPress={() => navigation.navigate("SpinSetup")}
             >
-            <Text style={styles.secondaryButtonText}>Spin Custom Dishes</Text>
+            <Text style={styles.secondaryButtonText}>Spin Your Dishes</Text>
         </TouchableOpacity>
         <Text style={styles.footerText}>
-          Choose .your random dish
+          Choose a random dish
         </Text>
       </View>
     </SafeAreaView>

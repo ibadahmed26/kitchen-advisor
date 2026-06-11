@@ -41,6 +41,7 @@ export const meatSections = [
       { id: "butter", name: "Butter" },
       { id: "egg", name: "Eggs" },
       { id: "milk", name: "Milk" },
+      { id: "cream", name: "Fresh Cream" },
     ],
   },
 ];
@@ -66,33 +67,37 @@ export const vegetableItems = [
 ];
 
 export const pulseItems = [
-  { id: "daal_chana", name: "Daal Chana" },
+  { id: "rice", name: "Rice / Chawal" },
+    { id: "daal_chana", name: "Daal Chana" },
   { id: "daal_masoor", name: "Daal Masoor" },
   { id: "daal_moong", name: "Daal Moong" },
   { id: "daal_mash", name: "Daal Mash" },
   { id: "daal_malka", name: "Daal Malka / Sabut Masoor" },
   { id: "bean", name: "Red/Black Lobia" },
   { id: "chickpeas", name: "White/Black Chana" },
-  { id: "rice", name: "Basmati Rice / Biryani Chawal" },
   { id: "macaroni", name: "Macaroni" },
   { id: "spaghetti", name: "Spaghetti" },
+  { id: "pasta", name: "Pasta" },
   { id: "flour", name: "Flour / Atta" },
-  { id: "besan", name: "Baisan" },
+  { id: "baisan", name: "Baisan" },
   
 ];
 
 export const accentItems = [
   { id: "yogurt", name: "Yogurt" },
   { id: "lemon", name: "Lemon" },
+  { id: "oil", name: "Cooking Oil" },
+  { id: "ghee", name: "Ghee" },
   { id: "green_chilli", name: "Green Chillies" },
   { id: "garlic", name: "Garlic" },
   { id: "ginger", name: "Ginger" },
   { id: "coriander", name: "Coriander / Dhaniya" },
   { id: "mint", name: "Mint / Podeena" },
-  { id: "oil", name: "Cooking Oil" },
-  { id: "ghee", name: "Ghee" },
   { id: "cumin", name: "Cumin / Zeera" },
   { id: "salt", name: "Salt / Namak" },
+  { id: "paper", name: "Black Paper" },
   { id: "red_chilli", name: "Red Chilli / Laal Mirch" },
-  { id: "garam_masala", name: "Garam Masala" }
+  { id: "garam_masala", name: "Garam Masala" },
+  { id: "sugar", name: "Sugar" },
+  { id: "mayo", name: "Mayo" },
 ];

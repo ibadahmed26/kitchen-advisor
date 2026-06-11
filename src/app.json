@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Kitchen Advisor",
+    "slug": "kitchen-advisor",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF4E6"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFF4E6"
+      },
+      "package": "com.yourname.kitchenadvisor"
+    }
+  }
+}

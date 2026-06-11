@@ -2,7 +2,7 @@ export const recipes = [
   {
     id: "chicken_karahi",
     name: "Chicken Karahi",
-    mainIngredients: ["chicken_with_bone"],
+    mainIngredients: ["chicken_with_bone", "tomato"],
     ingredients: ["chicken_with_bone", "tomato", "green_chilli", "ginger", "garlic", "oil", "salt"],
     time: "40 mins",
     difficulty: "Medium",
@@ -10,7 +10,7 @@ export const recipes = [
   {
     id: "chicken_handi",
     name: "Chicken Handi",
-    mainIngredients: ["chicken_boneless", "yogurt"],
+    mainIngredients: ["chicken_boneless", "yogurt", "cream"],
     ingredients: ["chicken_boneless", "yogurt", "onion", "ginger", "garlic", "green_chilli", "oil", "salt"],
     time: "45 mins",
     difficulty: "Medium",
@@ -44,6 +44,14 @@ export const recipes = [
     name: "Chicken Macaroni",
     mainIngredients: ["chicken_boneless", "macaroni"],
     ingredients: ["chicken_boneless", "macaroni", "capsicum", "carrot", "oil", "salt"],
+    time: "35 mins",
+    difficulty: "Easy",
+  },
+  {
+    id: "chicken_pasta",
+    name: "Chicken Macaroni",
+    mainIngredients: ["chicken_boneless", "pasta", "cream", "milk"],
+    ingredients: ["chicken_boneless", "macaroni", "capsicum", "carrot","cream", "milk", "oil", "salt"],
     time: "35 mins",
     difficulty: "Easy",
   },
