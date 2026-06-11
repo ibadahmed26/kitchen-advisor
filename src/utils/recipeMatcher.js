@@ -1,6 +1,6 @@
 import { recipes } from "../data/recipes";
 
-function getRandomRecipes(list, limit = 5) {
+function getRandomRecipes(list, limit = 4) {
   return [...list].sort(() => Math.random() - 0.5).slice(0, limit);
 }
 
@@ -20,34 +20,58 @@ function isIngredientMatch(selectedId, recipeIngredientId) {
   );
 }
 
-function recipeHasIngredient(recipe, selectedId) {
+function selectedHasIngredient(selectedIngredients, recipeIngredientId) {
+  return selectedIngredients.some((selectedId) =>
+    isIngredientMatch(selectedId, recipeIngredientId)
+  );
+}
+
+function recipeHasSelectedIngredient(recipe, selectedId) {
   return recipe.ingredients.some((recipeIngredientId) =>
     isIngredientMatch(selectedId, recipeIngredientId)
   );
 }
 
-export function getDishSuggestions(selectedIngredients = [], limit = 5) {
+function hasAllMainIngredients(recipe, selectedIngredients) {
+  const mainIngredients = recipe.mainIngredients || [];
+
+  if (!mainIngredients.length) {
+    return true;
+  }
+
+  return mainIngredients.every((mainIngredientId) =>
+    selectedHasIngredient(selectedIngredients, mainIngredientId)
+  );
+}
+
+export function getDishSuggestions(selectedIngredients = [], limit = 4) {
   if (!selectedIngredients.length) {
     return getRandomRecipes(recipes, limit);
   }
 
   const scoredRecipes = recipes
+    .filter((recipe) => hasAllMainIngredients(recipe, selectedIngredients))
     .map((recipe) => {
       const matchedIngredients = selectedIngredients.filter((ingredientId) =>
-        recipeHasIngredient(recipe, ingredientId)
+        recipeHasSelectedIngredient(recipe, ingredientId)
       );
 
       const matchedCount = matchedIngredients.length;
-      const matchRatio = matchedCount / selectedIngredients.length;
+      const mainCount = recipe.mainIngredients?.length || 0;
 
       return {
         ...recipe,
         matchedCount,
-        matchRatio,
+        mainCount,
+        matchRatio: matchedCount / selectedIngredients.length,
       };
     })
     .filter((recipe) => recipe.matchedCount > 0)
     .sort((a, b) => {
+      if (b.mainCount !== a.mainCount) {
+        return b.mainCount - a.mainCount;
+      }
+
       if (b.matchedCount !== a.matchedCount) {
         return b.matchedCount - a.matchedCount;
       }

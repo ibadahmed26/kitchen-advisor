@@ -2,6 +2,7 @@ export const recipes = [
   {
     id: "chicken_karahi",
     name: "Chicken Karahi",
+    mainIngredients: ["chicken_with_bone"],
     ingredients: ["chicken_with_bone", "tomato", "green_chilli", "ginger", "garlic", "oil", "salt"],
     time: "40 mins",
     difficulty: "Medium",
@@ -9,6 +10,7 @@ export const recipes = [
   {
     id: "chicken_handi",
     name: "Chicken Handi",
+    mainIngredients: ["chicken_boneless", "yogurt"],
     ingredients: ["chicken_boneless", "yogurt", "onion", "ginger", "garlic", "green_chilli", "oil", "salt"],
     time: "45 mins",
     difficulty: "Medium",
@@ -16,6 +18,7 @@ export const recipes = [
   {
     id: "chicken_pulao",
     name: "Chicken Pulao",
+    mainIngredients: ["chicken_with_bone", "basmati_rice"],
     ingredients: ["chicken_with_bone", "basmati_rice", "onion", "ginger", "garlic", "oil", "salt"],
     time: "50 mins",
     difficulty: "Medium",
@@ -23,6 +26,7 @@ export const recipes = [
   {
     id: "chicken_biryani",
     name: "Chicken Biryani",
+    mainIngredients: ["chicken_with_bone", "basmati_rice", "yogurt"],
     ingredients: ["chicken_with_bone", "basmati_rice", "yogurt", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "1 hour",
     difficulty: "Hard",
@@ -30,6 +34,7 @@ export const recipes = [
   {
     id: "chicken_qeema",
     name: "Chicken Qeema",
+    mainIngredients: ["chicken_mince"],
     ingredients: ["chicken_mince", "onion", "tomato", "green_chilli", "ginger", "garlic", "oil", "salt"],
     time: "35 mins",
     difficulty: "Easy",
@@ -37,6 +42,7 @@ export const recipes = [
   {
     id: "chicken_macaroni",
     name: "Chicken Macaroni",
+    mainIngredients: ["chicken_boneless", "macaroni"],
     ingredients: ["chicken_boneless", "macaroni", "capsicum", "carrot", "oil", "salt"],
     time: "35 mins",
     difficulty: "Easy",
@@ -44,6 +50,7 @@ export const recipes = [
   {
     id: "beef_qeema",
     name: "Beef Qeema",
+    mainIngredients: ["beef_mince"],
     ingredients: ["beef_mince", "onion", "tomato", "green_chilli", "ginger", "garlic", "oil", "salt"],
     time: "45 mins",
     difficulty: "Medium",
@@ -51,6 +58,7 @@ export const recipes = [
   {
     id: "aloo_qeema",
     name: "Aloo Qeema",
+    mainIngredients: ["beef_mince", "potato"],
     ingredients: ["beef_mince", "potato", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "45 mins",
     difficulty: "Medium",
@@ -58,6 +66,7 @@ export const recipes = [
   {
     id: "mutton_karahi",
     name: "Mutton Karahi",
+    mainIngredients: ["mutton_with_bone"],
     ingredients: ["mutton_with_bone", "tomato", "green_chilli", "ginger", "garlic", "oil", "salt"],
     time: "1 hour",
     difficulty: "Hard",
@@ -65,6 +74,7 @@ export const recipes = [
   {
     id: "bhindi_gosht",
     name: "Bhindi Gosht",
+    mainIngredients: ["mutton_with_bone", "okra"],
     ingredients: ["mutton_with_bone", "okra", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "1 hour",
     difficulty: "Medium",
@@ -72,6 +82,7 @@ export const recipes = [
   {
     id: "palak_gosht",
     name: "Palak Gosht",
+    mainIngredients: ["mutton_with_bone", "spinach"],
     ingredients: ["mutton_with_bone", "spinach", "onion", "ginger", "garlic", "oil", "salt"],
     time: "1 hour",
     difficulty: "Medium",
@@ -79,6 +90,7 @@ export const recipes = [
   {
     id: "aloo_gosht",
     name: "Aloo Gosht",
+    mainIngredients: ["mutton_with_bone", "potato"],
     ingredients: ["mutton_with_bone", "potato", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "1 hour",
     difficulty: "Medium",
@@ -86,6 +98,7 @@ export const recipes = [
   {
     id: "fish_curry",
     name: "Fish Curry",
+    mainIngredients: ["fish"],
     ingredients: ["fish", "tomato", "yogurt", "ginger", "garlic", "oil", "salt"],
     time: "35 mins",
     difficulty: "Medium",
@@ -93,6 +106,7 @@ export const recipes = [
   {
     id: "fish_fry",
     name: "Fish Fry",
+    mainIngredients: ["fish"],
     ingredients: ["fish", "lemon", "red_chilli", "turmeric", "oil", "salt"],
     time: "25 mins",
     difficulty: "Easy",
@@ -100,6 +114,7 @@ export const recipes = [
   {
     id: "prawn_masala",
     name: "Prawn Masala",
+    mainIngredients: ["prawn"],
     ingredients: ["prawn", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "30 mins",
     difficulty: "Easy",
@@ -107,6 +122,7 @@ export const recipes = [
   {
     id: "aloo_gobi",
     name: "Aloo Gobi",
+    mainIngredients: ["potato", "cauliflower"],
     ingredients: ["potato", "cauliflower", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "35 mins",
     difficulty: "Easy",
@@ -114,6 +130,7 @@ export const recipes = [
   {
     id: "aloo_matar",
     name: "Aloo Matar",
+    mainIngredients: ["potato", "peas"],
     ingredients: ["potato", "peas", "onion", "tomato", "oil", "salt"],
     time: "30 mins",
     difficulty: "Easy",
@@ -121,6 +138,7 @@ export const recipes = [
   {
     id: "bhindi_masala",
     name: "Bhindi Masala",
+    mainIngredients: ["okra"],
     ingredients: ["okra", "onion", "tomato", "green_chilli", "oil", "salt"],
     time: "30 mins",
     difficulty: "Easy",
@@ -128,6 +146,7 @@ export const recipes = [
   {
     id: "palak_sabzi",
     name: "Palak Sabzi",
+    mainIngredients: ["spinach"],
     ingredients: ["spinach", "onion", "garlic", "green_chilli", "oil", "salt"],
     time: "25 mins",
     difficulty: "Easy",
@@ -135,6 +154,7 @@ export const recipes = [
   {
     id: "lauki_sabzi",
     name: "Lauki Sabzi",
+    mainIngredients: ["bottle_gourd"],
     ingredients: ["bottle_gourd", "onion", "tomato", "oil", "salt"],
     time: "30 mins",
     difficulty: "Easy",
@@ -142,6 +162,7 @@ export const recipes = [
   {
     id: "daal_chawal",
     name: "Daal Chawal",
+    mainIngredients: ["daal_masoor", "basmati_rice"],
     ingredients: ["daal_masoor", "basmati_rice", "onion", "garlic", "oil", "salt"],
     time: "40 mins",
     difficulty: "Easy",
@@ -149,6 +170,7 @@ export const recipes = [
   {
     id: "daal_tadka",
     name: "Daal Tadka",
+    mainIngredients: ["daal_moong"],
     ingredients: ["daal_moong", "onion", "garlic", "green_chilli", "oil", "salt"],
     time: "35 mins",
     difficulty: "Easy",
@@ -156,6 +178,7 @@ export const recipes = [
   {
     id: "chana_masala",
     name: "Chana Masala",
+    mainIngredients: ["chickpeas"],
     ingredients: ["chickpeas", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "45 mins",
     difficulty: "Medium",
@@ -163,6 +186,7 @@ export const recipes = [
   {
     id: "vegetable_pulao",
     name: "Vegetable Pulao",
+    mainIngredients: ["basmati_rice"],
     ingredients: ["basmati_rice", "peas", "carrot", "potato", "onion", "oil", "salt"],
     time: "45 mins",
     difficulty: "Easy",
@@ -170,6 +194,7 @@ export const recipes = [
   {
     id: "egg_curry",
     name: "Egg Curry",
+    mainIngredients: ["egg"],
     ingredients: ["egg", "onion", "tomato", "ginger", "garlic", "oil", "salt"],
     time: "30 mins",
     difficulty: "Easy",

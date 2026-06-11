@@ -11,6 +11,8 @@ import AccentsScreen from "../screens/AccentsScreen";
 import ResultsScreen from "../screens/ResultsScreen";
 import GameScreen from "../screens/GameScreen";
 import FinalDishScreen from "../screens/FinalDishScreen";
+import SpinSetupScreen from "../screens/SpinSetupScreen";
+import SpinWheelScreen from "../screens/SpinWheelScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +36,17 @@ export default function AppNavigator() {
             },
           }}
         >
+        <Stack.Screen
+            name="SpinSetup"
+            component={SpinSetupScreen}
+            options={{ title: "Add Your Dishes" }}
+            />
+
+        <Stack.Screen
+            name="SpinWheel"
+            component={SpinWheelScreen}
+            options={{ title: "Spin Dish Picker" }}
+            />
           <Stack.Screen
             name="Home"
             component={HomeScreen}

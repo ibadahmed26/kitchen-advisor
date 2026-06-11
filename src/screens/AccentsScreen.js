@@ -27,6 +27,17 @@ export default function AccentsScreen({ navigation, route }) {
         : [...prev, itemId]
     );
   };
+  const selectAllItems = () => {
+  const allItemIds = accentItems.map((item) => item.id);
+
+  const allSelected = allItemIds.every((id) => selectedItems.includes(id));
+
+  if (allSelected) {
+    setSelectedItems([]);
+  } else {
+    setSelectedItems(allItemIds);
+  }
+};
 
   const goNext = () => {
     navigation.navigate("Results", {
@@ -51,7 +62,13 @@ export default function AccentsScreen({ navigation, route }) {
         <Text style={styles.subtitle}>
           Select masalay and common kitchen items
         </Text>
-
+        <TouchableOpacity style={styles.selectAllButton} onPress={selectAllItems}>
+        <Text style={styles.selectAllButtonText}>
+            {accentItems.every((item) => selectedItems.includes(item.id))
+            ? "Clear All Basic Items"
+            : "Select All Basic Items"}
+        </Text>
+        </TouchableOpacity>
         <SectionCard title="Basic Items">
           <View style={styles.chipContainer}>
             {accentItems.map((item) => (
@@ -80,6 +97,20 @@ export default function AccentsScreen({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    selectAllButton: {
+  backgroundColor: "#ffbc8fff",
+  paddingVertical: 14,
+  paddingHorizontal: 18,
+  borderRadius: 16,
+  alignItems: "center",
+  marginBottom: 14,
+},
+
+selectAllButtonText: {
+  color: "#000000ff",
+  fontSize: 15,
+  fontWeight: "900",
+},
   safeArea: {
     flex: 1,
     backgroundColor: "#FFF4E6",

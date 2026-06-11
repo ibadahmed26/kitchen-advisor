@@ -33,12 +33,39 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.footerText}>
           Select what is available at home and we will suggest what to cook.
         </Text>
+        <TouchableOpacity
+            style={styles.secondaryButton}
+            onPress={() => navigation.navigate("SpinSetup")}
+            >
+            <Text style={styles.secondaryButtonText}>Spin Custom Dishes</Text>
+        </TouchableOpacity>
+        <Text style={styles.footerText}>
+          Choose .your random dish
+        </Text>
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+    secondaryButton: {
+  backgroundColor: "#D35400",
+  paddingVertical: 16,
+  paddingHorizontal: 26,
+  borderRadius: 18,
+  width: "100%",
+  alignItems: "center",
+  marginTop: 16,
+  shadowColor: "#000",
+  shadowOpacity: 0.12,
+  shadowRadius: 8,
+  elevation: 3,
+},
+secondaryButtonText: {
+  color: "#FFF4E6",
+  fontSize: 17,
+  fontWeight: "900",
+},
   safeArea: {
     flex: 1,
     backgroundColor: "#FFF4E6",
@@ -84,7 +111,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   footerText: {
-    marginTop: 28,
+    marginTop: 8,
     fontSize: 14,
     color: "#8A6A4F",
     textAlign: "center",
